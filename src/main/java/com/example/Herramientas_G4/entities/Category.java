@@ -58,7 +58,7 @@ public class Category implements Serializable {
         this.description = description;
     }
 
-    public Set<Tool> getOrtopedics() {
+    public Set<Tool> getTools() {
         return tools;
     }
 
