@@ -61,6 +61,14 @@ public class Tool implements Serializable {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -69,12 +77,12 @@ public class Tool implements Serializable {
         this.brand = brand;
     }
 
-    public String getName() {
-        return name;
+    public Integer getYear() {
+        return year;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
     public String getDescription() {
@@ -93,14 +101,6 @@ public class Tool implements Serializable {
         this.category = category;
     }
 
-    public Set<Reservation> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(Set<Reservation> reservations) {
-        this.reservations = reservations;
-    }
-
     public Set<Message> getMessages() {
         return messages;
     }
@@ -109,12 +109,12 @@ public class Tool implements Serializable {
         this.messages = messages;
     }
 
-    public Integer getYear() {
-        return year;
+    public Set<Reservation> getReservations() {
+        return reservations;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
     }
 
 }
