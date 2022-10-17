@@ -33,7 +33,6 @@ public class Category implements Serializable {
     @JsonIgnoreProperties("category")
     private Set<Tool> tools = new HashSet<>();
 
-    // ***** METODOS *****
     public Integer getId() {
         return id;
     }
@@ -65,5 +64,7 @@ public class Category implements Serializable {
     public void setTools(Set<Tool> tools) {
         this.tools = tools;
     }
+
+    // ***** METODOS *****
 
 }

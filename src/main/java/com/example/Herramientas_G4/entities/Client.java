@@ -42,14 +42,12 @@ public class Client implements Serializable {
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private Set<Reservation> reservations = new HashSet<>();
 
-    // ***** METODOS *****
-
-    public String getName() {
-        return name;
+    public Integer getIdClient() {
+        return idClient;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIdClient(Integer idClient) {
+        this.idClient = idClient;
     }
 
     public String getEmail() {
@@ -68,20 +66,20 @@ public class Client implements Serializable {
         this.password = password;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Integer getAge() {
         return age;
     }
 
     public void setAge(Integer age) {
         this.age = age;
-    }
-
-    public Set<Reservation> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(Set<Reservation> reservations) {
-        this.reservations = reservations;
     }
 
     public Set<Message> getMessages() {
@@ -92,12 +90,14 @@ public class Client implements Serializable {
         this.messages = messages;
     }
 
-    public Integer getIdClient() {
-        return idClient;
+    public Set<Reservation> getReservations() {
+        return reservations;
     }
 
-    public void setIdClient(Integer idClient) {
-        this.idClient = idClient;
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
     }
+
+    // ***** METODOS *****
 
 }

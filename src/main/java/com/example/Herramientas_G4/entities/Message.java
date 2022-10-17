@@ -37,7 +37,13 @@ public class Message implements Serializable {
     @JoinColumn(name = "client_id")
     private Client client;
 
-    // ***** METODOS *****
+    public Integer getIdMessage() {
+        return idMessage;
+    }
+
+    public void setIdMessage(Integer idMessage) {
+        this.idMessage = idMessage;
+    }
 
     public String getMessageText() {
         return messageText;
@@ -45,14 +51,6 @@ public class Message implements Serializable {
 
     public void setMessageText(String messageText) {
         this.messageText = messageText;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 
     public Tool getTool() {
@@ -63,12 +61,14 @@ public class Message implements Serializable {
         this.tool = tool;
     }
 
-    public Integer getIdMessage() {
-        return idMessage;
+    public Client getClient() {
+        return client;
     }
 
-    public void setIdMessage(Integer idMessage) {
-        this.idMessage = idMessage;
+    public void setClient(Client client) {
+        this.client = client;
     }
+
+    // ***** METODOS *****
 
 }

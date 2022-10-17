@@ -26,20 +26,17 @@ public class Tool implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
-
     @Column(name = "brand")
     private String brand;
 
-    @Column(name = "years")
-    private Integer year;
+    @Column(name = "model")
+    private Integer model;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "name")
+    private String name;
 
     // ***** RELACIONES *****
-    // Relación uno a uno. Una Farm tiene un Category relacionada.
+    // Relación uno a uno. Una Tool tiene un Category relacionada.
     @ManyToOne(optional = false)
     @JsonIgnoreProperties(value = { "tools" })
     @JoinColumn(name = "category_id")
@@ -61,14 +58,6 @@ public class Tool implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getBrand() {
         return brand;
     }
@@ -77,20 +66,20 @@ public class Tool implements Serializable {
         this.brand = brand;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getModel() {
+        return model;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setModel(Integer model) {
+        this.model = model;
     }
 
-    public String getDescription() {
-        return description;
+    public String getName() {
+        return name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Category getCategory() {
