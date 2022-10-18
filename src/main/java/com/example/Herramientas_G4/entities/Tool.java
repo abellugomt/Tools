@@ -29,11 +29,14 @@ public class Tool implements Serializable {
     @Column(name = "brand")
     private String brand;
 
-    @Column(name = "model")
-    private Integer model;
+    @Column(name = "year")
+    private Integer year;
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "description")
+    private String description;
 
     // ***** RELACIONES *****
     // Relación uno a uno. Una Tool tiene un Category relacionada.
@@ -49,7 +52,6 @@ public class Tool implements Serializable {
     @OneToMany(mappedBy = "tool", cascade = CascadeType.ALL)
     private Set<Reservation> reservations = new HashSet<>();
 
-    // ***** METODOS *****
     public Integer getId() {
         return id;
     }
@@ -66,12 +68,12 @@ public class Tool implements Serializable {
         this.brand = brand;
     }
 
-    public Integer getModel() {
-        return model;
+    public Integer getYear() {
+        return year;
     }
 
-    public void setModel(Integer model) {
-        this.model = model;
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
     public String getName() {
@@ -80,6 +82,14 @@ public class Tool implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Category getCategory() {
@@ -105,5 +115,8 @@ public class Tool implements Serializable {
     public void setReservations(Set<Reservation> reservations) {
         this.reservations = reservations;
     }
+
+    // ***** METODOS *****
+   
 
 }
