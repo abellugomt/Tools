@@ -42,13 +42,13 @@ public class ReservationController {
 
     @PostMapping("/save")
     public ResponseEntity<Void> crearReservation(@RequestBody Reservation reservation) {
-        this.reservationService.crearReservation(reservation);
+        this.reservationService.getReservation(reservation);
         return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarReservation(@PathVariable("id") int id) {
-        this.reservationService.eliminarReservation(id);
+        this.reservationService.getReservation(id);
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
